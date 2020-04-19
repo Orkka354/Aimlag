@@ -1,0 +1,229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1928970262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919919962161643091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3e8c6ee94ff9248be414b51e718861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 1
+  thrust: 10000
+  pitchSpeed: 100
+  yawSpeed: 100
+  rollSpeed: 100
+  boostMultiplier: 2
+  pitchInput:
+    m_Name: Pitch Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b6ba23e6-b028-4e2e-a3cb-07b31ee0e1a4
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: ws
+      m_Id: 253dcc43-95db-4ab2-a46f-54992e400523
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pitch Input
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 9bec8041-f0a5-4cd6-bdd1-13fe04ca0a88
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pitch Input
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: e9bb86f6-adde-422b-8bf2-02051865d071
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pitch Input
+      m_Flags: 8
+  yawInput:
+    m_Name: Yaw Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bae1d8b5-e67c-4974-a6a6-f626111ebaab
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 1D Axis
+      m_Id: cf0882d3-1505-4354-97f3-faa9d46ac527
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Yaw Input
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 9a59f0d5-cce7-4d2b-8537-8dedba4cbd49
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Yaw Input
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 36cbff6e-086d-4b48-8e14-fd4b5ceb1305
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Yaw Input
+      m_Flags: 8
+  boostInput:
+    m_Name: Boost Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bd362e5b-141e-4b90-b056-41c388f6757c
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 9d0d0834-0942-43f6-a20c-04d5efe5422e
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Boost Input
+      m_Flags: 0
+  pauseInput:
+    m_Name: Pause Input
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: aab0fc39-a9f2-484c-89e7-169b1f84ff6a
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c9c16463-5658-4f1a-93ab-d336bf99a5e1
+      m_Path: <Keyboard>/escape
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Pause Input
+      m_Flags: 0
+--- !u!114 &5919919962161643098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919919962161643091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    vectorObservationSize: 0
+    numStackedVectorObservations: 1
+    vectorActionSize: 030000000300000002000000
+    vectorActionDescriptions: []
+    vectorActionSpaceType: 0
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_UseHeuristic: 1
+  m_BehaviorName: My Behavior
+--- !u!1001 &7898377256187831521
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4592382525388282546, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_Name
+      value: planeholderPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0036
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.262
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.005413306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4592382525388282558, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.012204051
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4592382525388282556, guid: 40b67b4e22ee7fc43b9cc2685123f544, type: 3}
+    - {fileID: 4592382525388282555, guid: 40b67b4e22ee7fc43b9cc2685123f544, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 40b67b4e22ee7fc43b9cc2685123f544, type: 3}
+--- !u!1 &5919919962161643091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4592382525388282546, guid: 40b67b4e22ee7fc43b9cc2685123f544,
+    type: 3}
+  m_PrefabInstance: {fileID: 7898377256187831521}
+  m_PrefabAsset: {fileID: 0}
